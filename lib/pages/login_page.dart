@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:e_pedidos_front/shared/widgets/custom_button.dart';
+import 'package:e_pedidos_front/pages/register_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -90,18 +92,11 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                               SizedBox(
                                 width: double.infinity,
-                                child: TextButton(
-                                  onPressed: () {},
-                                  style: ButtonStyle(
-                                      backgroundColor:
-                                          MaterialStateProperty.all<Color>(
-                                              const Color.fromRGBO(
-                                                  54, 148, 178, 1))),
-                                  child: const Text(
-                                    'Entrar',
-                                    style: TextStyle(color: Colors.white),
-                                  ),
-                                ),
+                                child: CustomButton(
+                                  text: 'Entrar',
+                                  backgroundColor: const Color.fromRGBO(54, 148, 178, 1),
+                                  onPressed: (){},
+                                )
                               ),
                               const SizedBox(
                                 height: 10,
@@ -119,7 +114,9 @@ class _LoginPageState extends State<LoginPage> {
                                 height: 10,
                               ),
                               TextButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const RegisterPage()));
+                                  },
                                   child: const Text('Cadastre-se',
                                       style: TextStyle(
                                           fontSize: 18,
