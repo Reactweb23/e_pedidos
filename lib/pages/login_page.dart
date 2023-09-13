@@ -1,3 +1,4 @@
+import 'package:e_pedidos_front/pages/recover_password.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:e_pedidos_front/shared/widgets/custom_button.dart';
@@ -23,10 +24,8 @@ class _LoginPageState extends State<LoginPage> {
                 child: Container(
                   decoration: const BoxDecoration(
                       image: DecorationImage(
-                    image: AssetImage(
-                        'lib/assets/background.png'),
-                    fit: BoxFit
-                        .cover, 
+                    image: AssetImage('lib/assets/background.png'),
+                    fit: BoxFit.cover,
                   )),
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -84,20 +83,27 @@ class _LoginPageState extends State<LoginPage> {
                               const SizedBox(
                                 height: 10,
                               ),
-                              const InkWell(
-                                child: Text('Esqueceu a senha?'),
+                              InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const RecoverPassword()));
+                                },
+                                child: const Text('Esqueceu a senha?'),
                               ),
                               const SizedBox(
                                 height: 10,
                               ),
                               SizedBox(
-                                width: double.infinity,
-                                child: CustomButton(
-                                  text: 'Entrar',
-                                  backgroundColor: const Color.fromRGBO(54, 148, 178, 1),
-                                  onPressed: (){},
-                                )
-                              ),
+                                  width: double.infinity,
+                                  child: CustomButton(
+                                    text: 'Entrar',
+                                    backgroundColor:
+                                        const Color.fromRGBO(54, 148, 178, 1),
+                                    onPressed: () {},
+                                  )),
                               const SizedBox(
                                 height: 10,
                               ),
@@ -115,7 +121,11 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                               TextButton(
                                   onPressed: () {
-                                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const RegisterPage()));
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const RegisterPage()));
                                   },
                                   child: const Text('Cadastre-se',
                                       style: TextStyle(
