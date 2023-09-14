@@ -41,7 +41,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       height: 20,
                     ),
                     isRegistered
-                        ? Container(
+                        ? SizedBox(
                             height: MediaQuery.of(context).size.height,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
