@@ -58,6 +58,10 @@ flutter:
   - lib/assets/background.png
   - lib/assets/logo.svg
   - lib/assets/verified.svg
+  - lib/assets/table_green.svg
+  - lib/assets/table_red.svg
+  - lib/assets/table_yellow.svg
+  - lib/assets/verified_icon.svg
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
