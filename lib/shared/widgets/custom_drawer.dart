@@ -16,11 +16,69 @@ class _CustomDrawerState extends State<CustomDrawer> {
       UserAccountsDrawerHeader(
           decoration: const BoxDecoration(color: Colors.orange),
           currentAccountPicture: CircleAvatar(
-            /* backgroundColor: Colors.white, */
-            child: SvgPicture.asset('lib/assets/logo.svg'),
+            maxRadius: double.tryParse('44'),
+            minRadius: double.tryParse('44'),
+            backgroundColor: const Color.fromRGBO(255, 219, 126, 1),
           ),
-          accountName: const Text("E-Peedidos"),
-          accountEmail: const Text("email@email.com"))
+          accountName: const Text(
+            "EcoVibe Bistrô",
+            style: TextStyle(
+                fontWeight: FontWeight.w500, fontSize: 16, color: Colors.white),
+          ),
+          accountEmail: const Text(
+            "ecovibebistro@gourmet.com.br",
+            style: TextStyle(
+                fontWeight: FontWeight.w500, fontSize: 14, color: Colors.white),
+          )),
+          const ListTile(
+            leading: Icon(Icons.description_sharp),
+            title: Text("Pedidos",
+            style: TextStyle(
+                fontWeight: FontWeight.w500, fontSize: 18, color: Color.fromRGBO(131, 131, 131, 1)),
+          )),
+          const ListTile(
+            leading: Icon(Icons.table_bar_rounded),
+            title: Text("Mesas",
+            style: TextStyle(
+                fontWeight: FontWeight.w500, fontSize: 18, color: Color.fromRGBO(131, 131, 131, 1)),
+          )),
+          const ListTile(
+            leading: Icon(Icons.star),
+            title: Text("Destaques",
+            style: TextStyle(
+                fontWeight: FontWeight.w500, fontSize: 18, color: Color.fromRGBO(131, 131, 131, 1)),
+          )),
+          const ListTile(
+            leading: Icon(Icons.add),
+            title: Text("Novo Produto",
+            style: TextStyle(
+                fontWeight: FontWeight.w500, fontSize: 18, color: Color.fromRGBO(131, 131, 131, 1)),
+          )),
+          const ListTile(
+            leading: Icon(Icons.menu_book_outlined),
+            title: Text("Meu cardápio",
+            style: TextStyle(
+                fontWeight: FontWeight.w500, fontSize: 18, color: Color.fromRGBO(131, 131, 131, 1)),
+          )),
+          const ListTile(
+            leading: Icon(Icons.category_outlined),
+            title: Text("Nova categoria",
+            style: TextStyle(
+                fontWeight: FontWeight.w500, fontSize: 18, color: Color.fromRGBO(131, 131, 131, 1)),
+          )),
+          const ListTile(
+            leading: Icon(Icons.account_box),
+            title: Text("Minha conta",
+            style: TextStyle(
+                fontWeight: FontWeight.w500, fontSize: 18, color: Color.fromRGBO(131, 131, 131, 1)),
+          )),
+          const ListTile(
+            leading: Icon(Icons.shopify_sharp),
+            title: Text("Resumo de Vendas",
+            style: TextStyle(
+                fontWeight: FontWeight.w500, fontSize: 18, color: Color.fromRGBO(131, 131, 131, 1)),
+          )),
+          SvgPicture.asset('lib/assets/epedidos.svg')
     ]));
   }
 }

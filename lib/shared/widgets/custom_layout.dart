@@ -13,10 +13,13 @@ class CustomLayout extends StatelessWidget {
       backgroundColor: Colors.transparent,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const Text(
-          'EcoVibe Bistrô',
-          style: TextStyle(fontWeight: FontWeight.w500),
-          textAlign: TextAlign.center,
+        title: const Padding(
+          padding: EdgeInsets.fromLTRB(72, 0, 0, 0),
+          child: Text(
+            'EcoVibe Bistrô',
+            style: TextStyle(fontWeight: FontWeight.w500),
+            textAlign: TextAlign.center,
+          ),
         ),
         elevation: 0,
       ),

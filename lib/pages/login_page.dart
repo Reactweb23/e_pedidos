@@ -1,9 +1,7 @@
-import 'package:e_pedidos_front/pages/home_page.dart';
-import 'package:e_pedidos_front/pages/recover_password.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:e_pedidos_front/shared/widgets/custom_button.dart';
-import 'package:e_pedidos_front/pages/register_page.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -94,11 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                                     ),
                                     InkWell(
                                       onTap: () {
-                                        Navigator.pushReplacement(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const RecoverPassword()));
+                                       Navigator.of(context).pushReplacementNamed('/recoverPassword');
                                       },
                                       child: const Text('Esqueceu a senha?'),
                                     ),
@@ -116,11 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                                                     "email@email.com" &&
                                                 passwordController.text.trim() ==
                                                     "123") {
-                                              Navigator.pushReplacement(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const HomePag()));
+                                              Navigator.of(context).pushReplacementNamed('/home');
                                             } else {
                                               ScaffoldMessenger.of(context)
                                                   .showSnackBar(const SnackBar(
@@ -144,11 +134,7 @@ class _LoginPageState extends State<LoginPage> {
                                     const Text('Ainda não tem sua conta?'),
                                     TextButton(
                                         onPressed: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const RegisterPage()));
+                                          Navigator.of(context).pushReplacementNamed('/register');
                                         },
                                         child: const Text('Cadastre-se',
                                             style: TextStyle(
