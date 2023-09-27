@@ -1,6 +1,8 @@
+import 'package:e_pedidos_front/shared/widgets/custom_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:e_pedidos_front/shared/widgets/custom_card_table.dart';
+import 'package:e_pedidos_front/shared/widgets/custom_card_orders.dart';
 
 class HomePag extends StatefulWidget {
   const HomePag({super.key});
@@ -12,7 +14,7 @@ class HomePag extends StatefulWidget {
 class _HomePagState extends State<HomePag> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return CustomLayout(
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
@@ -32,7 +34,7 @@ class _HomePagState extends State<HomePag> {
               accountEmail: const Text("email@email.com"))
         ])),
         body: Padding(
-          padding: const EdgeInsets.fromLTRB(31, 45, 31, 0),
+          padding: const EdgeInsets.fromLTRB(31, 25, 31, 100),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -49,28 +51,12 @@ class _HomePagState extends State<HomePag> {
               ),
               Expanded(
                   child: ListView(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 15, vertical: 21),
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16),
-                        border: Border.all(
-                            color: const Color.fromRGBO(54, 148, 178, 1),
-                            width: 2.0)),
-                    child:  Row(
-                      children: [
-                         const Text('André - Mesa 01 - Sanduíche de espinafre',
-                            style: TextStyle(
-                                fontSize: 14, fontWeight: FontWeight.w500)),
-                                Padding(
-                                  padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
-                                  child: SvgPicture.asset('lib/assets/verified_icon.svg'),
-                                )
-                      ],
-                    ),
-                  )
+                children: const [
+                  CardOrders(),
+                  CardOrders(),
+                  CardOrders(),
+                  CardOrders(),
+                  CardOrders(),
                 ],
               ))
             ],

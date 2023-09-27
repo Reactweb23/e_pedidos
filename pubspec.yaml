@@ -62,6 +62,7 @@ flutter:
   - lib/assets/table_red.svg
   - lib/assets/table_yellow.svg
   - lib/assets/verified_icon.svg
+  - lib/assets/bg_bottom.svg
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
