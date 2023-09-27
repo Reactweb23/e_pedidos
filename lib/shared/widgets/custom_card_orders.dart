@@ -25,7 +25,7 @@ class _CardOrdersState extends State<CardOrders> {
           children: [
             const Text('André - Mesa 01 - Sanduíche de espinafre',
                 style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700)),
-            SvgPicture.asset('lib/assets/verified_icon.svg'),
+            SvgPicture.asset('lib/assets/icons_orders/icon_green.svg'),
           ],
         ),
       ),

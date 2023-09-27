@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:e_pedidos_front/shared/widgets/custom_drawer.dart';
 
 class CustomLayout extends StatelessWidget {
   final Widget child;
@@ -8,24 +9,34 @@ class CustomLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Scaffold(
-          backgroundColor: Colors.transparent,
-          body: SafeArea(
-            child: child, 
-          ),
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: const Text(
+          'EcoVibe Bistrô',
+          style: TextStyle(fontWeight: FontWeight.w500),
+          textAlign: TextAlign.center,
         ),
-        Positioned(
-          bottom: 0,
-          left: 0,
-          right: 0,
-          child: SvgPicture.asset(
-            'lib/assets/bg_bottom.svg', 
-            fit: BoxFit.fill,
-          ),
+        elevation: 0,
+      ),
+      drawer: const CustomDrawer(),
+      body: SafeArea(
+        child: Stack(
+          children: [
+            child,
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: SvgPicture.asset(
+                'lib/assets/bg_bottom.svg',
+                fit: BoxFit.fill,
+              ),
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }
