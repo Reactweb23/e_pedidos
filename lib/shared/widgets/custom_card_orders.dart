@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CardOrders extends StatefulWidget {
-  const CardOrders({super.key});
+  final String text;
+  final String svgPath;
+
+  const CardOrders({
+    Key? key,
+    required this.text,
+    required this.svgPath,
+  }) : super(key: key);
 
   @override
   State<CardOrders> createState() => _CardOrdersState();
@@ -17,15 +24,20 @@ class _CardOrdersState extends State<CardOrders> {
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 14),
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            border: Border.all(
-                color: const Color.fromRGBO(54, 148, 178, 1), width: 2.0)),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(
+            color: const Color.fromRGBO(54, 148, 178, 1),
+            width: 2.0,
+          ),
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text('André - Mesa 01 - Sanduíche de espinafre',
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700)),
-            SvgPicture.asset('lib/assets/icons_orders/icon_green.svg'),
+            Text(
+              widget.text,
+              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+            ),
+            SvgPicture.asset(widget.svgPath),
           ],
         ),
       ),

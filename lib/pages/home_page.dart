@@ -37,11 +37,26 @@ class _HomePagState extends State<HomePag> {
               Expanded(
                   child: ListView(
                 children: const [
-                  CardOrders(),
-                  CardOrders(),
-                  CardOrders(),
-                  CardOrders(),
-                  CardOrders(),
+                  CardOrders(
+                    text: 'André - Mesa 01 - Sanduíche de espinafre',
+                    svgPath: 'lib/assets/icons_orders/icon_green.svg',
+                  ),
+                  CardOrders(
+                    text: 'André - Mesa 01 - Sanduíche de espinafre',
+                    svgPath: 'lib/assets/icons_orders/icon_red.svg',
+                  ),
+                  CardOrders(
+                    text: 'André - Mesa 01 - Sanduíche de espinafre',
+                    svgPath: 'lib/assets/icons_orders/icon_yellow.svg',
+                  ),
+                  CardOrders(
+                    text: 'André - Mesa 01 - Sanduíche de espinafre',
+                    svgPath: 'lib/assets/icons_orders/icon_green.svg',
+                  ),
+                  CardOrders(
+                    text: 'André - Mesa 01 - Sanduíche de espinafre',
+                    svgPath: 'lib/assets/icons_orders/icon_yellow.svg',
+                  ),
                 ],
               ))
             ],

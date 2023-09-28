@@ -11,6 +11,9 @@ class OrdersPage extends StatefulWidget {
 class _OrdersPageState extends State<OrdersPage> {
   @override
   Widget build(BuildContext context) {
-    return const CustomLayout(child: Text('pedidos'));
+    return const CustomLayout(
+      child: Scaffold(
+        
+      ));
   }
 }
