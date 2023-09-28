@@ -63,6 +63,7 @@ flutter:
   - lib/assets/table_yellow.svg
   - lib/assets/bg_bottom.svg
   - lib/assets/epedidos.svg
+  - lib/assets/touch_icon.svg
   - lib/assets/icons_orders/icon_green.svg
   - lib/assets/icons_orders/icon_red.svg
   - lib/assets/icons_orders/icon_yellow.svg
