@@ -1,6 +1,7 @@
 import 'package:e_pedidos_front/shared/widgets/custom_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:e_pedidos_front/shared/widgets/custom_button.dart';
+import 'package:e_pedidos_front/shared/widgets/custom_dropdown_button.dart';
 
 class NewProductPage extends StatefulWidget {
   const NewProductPage({super.key});
@@ -10,6 +11,9 @@ class NewProductPage extends StatefulWidget {
 }
 
 class _NewProductPageState extends State<NewProductPage> {
+  List<String> valores = ['valor', 'valor2', 'valor3'];
+  String itemSelected = '';
+
   @override
   Widget build(BuildContext context) {
     return CustomLayout(
@@ -60,10 +64,23 @@ class _NewProductPageState extends State<NewProductPage> {
                     height: 7,
                   ),
                   const TextField(
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20))))),
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                          width: 2.0,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                          width: 2.0,
+                        ),
+                      ),
+                    ),
+                  ),
                   const SizedBox(
                     height: 15,
                   ),
@@ -75,10 +92,23 @@ class _NewProductPageState extends State<NewProductPage> {
                     height: 7,
                   ),
                   const TextField(
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20))))),
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                          width: 2.0,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                          width: 2.0,
+                        ),
+                      ),
+                    ),
+                  ),
                   const SizedBox(
                     height: 15,
                   ),
@@ -90,25 +120,23 @@ class _NewProductPageState extends State<NewProductPage> {
                     height: 7,
                   ),
                   const TextField(
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20))))),
-                  const SizedBox(
-                    height: 15,
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                          width: 2.0,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                          width: 2.0,
+                        ),
+                      ),
+                    ),
                   ),
-                  const Text(
-                    'Categoria',
-                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
-                  ),
-                  const SizedBox(
-                    height: 7,
-                  ),
-                  const TextField(
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20))))),
                   const SizedBox(
                     height: 15,
                   ),
@@ -120,10 +148,42 @@ class _NewProductPageState extends State<NewProductPage> {
                     height: 7,
                   ),
                   const TextField(
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(20))))),
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                          width: 2.0,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        borderSide: BorderSide(
+                          color: Colors.blue,
+                          width: 2.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const Text(
+                    'Categoria',
+                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
+                  ),
+                  const SizedBox(
+                    height: 7,
+                  ),
+                  CustomDropdownButton(
+                    value: itemSelected,
+                    items: valores,
+                    onChanged: (item) {
+                      setState(() {
+                        itemSelected = item!;
+                      });
+                    },
+                  ),
                   const SizedBox(
                     height: 35,
                   ),
