@@ -78,9 +78,12 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 fontSize: 18,
                 color: Color.fromRGBO(131, 131, 131, 1)),
           )),
-      const ListTile(
-          leading: Icon(Icons.menu_book_outlined),
-          title: Text(
+      ListTile(
+          onTap: () {
+            Navigator.of(context).pushNamed('/menu');
+          },
+          leading: const Icon(Icons.menu_book_outlined),
+          title: const Text(
             "Meu cardápio",
             style: TextStyle(
                 fontWeight: FontWeight.w500,

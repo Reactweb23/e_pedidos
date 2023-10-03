@@ -1,6 +1,7 @@
 import 'package:e_pedidos_front/pages/emphasis_page.dart';
 import 'package:e_pedidos_front/pages/home_page.dart';
 import 'package:e_pedidos_front/pages/login_page.dart';
+import 'package:e_pedidos_front/pages/my_menu_page.dart';
 import 'package:e_pedidos_front/pages/new_product_page.dart';
 import 'package:e_pedidos_front/pages/orders_page.dart';
 import 'package:e_pedidos_front/pages/recover_password.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/tables' : (context) => const TablePage(),
         '/emphasis' : (context) => const EmphasisPage(),
         '/newproduct' : (context) => const NewProductPage(),
+        '/menu' : (context) => const MyMenuPage(),
       }
     );
   }
