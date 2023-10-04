@@ -11,6 +11,8 @@ class CategoryPage extends StatefulWidget {
 }
 
 class _CategoryPageState extends State<CategoryPage> {
+  bool isRemove = false;
+
   @override
   Widget build(BuildContext context) {
     return CustomLayout(
@@ -50,21 +52,59 @@ class _CategoryPageState extends State<CategoryPage> {
             ),
             Expanded(
                 child: ListView(
-              children: const [
-                CustomListCategory()
+              children: [
+                CustomListCategory(
+                  text: 'Pratos',
+                  isRemove: isRemove,
+                ),
+                CustomListCategory(
+                  text: 'Almoço',
+                  isRemove: isRemove,
+                ),
+                CustomListCategory(
+                  text: 'Bebidas',
+                  isRemove: isRemove,
+                ),
+                CustomListCategory(
+                  text: 'Sucos',
+                  isRemove: isRemove,
+                )
               ],
             )),
             Center(
                 child: Column(
               children: [
-                CustomButton(
-                    text: 'Adicionar categoria',
-                    backgroundColor: const Color.fromRGBO(54, 148, 178, 1),
-                    onPressed: () {}),
-                CustomButton(
-                    text: 'Remover categoria',
-                    backgroundColor: const Color.fromRGBO(54, 148, 178, 1),
-                    onPressed: () {})
+                isRemove
+                    ? Container()
+                    : CustomButton(
+                        text: 'Adicionar categoria',
+                        backgroundColor: const Color.fromRGBO(54, 148, 178, 1),
+                        onPressed: () {}),
+                isRemove
+                    ? Container()
+                    : CustomButton(
+                        text: 'Remover categoria',
+                        backgroundColor: const Color.fromRGBO(54, 148, 178, 1),
+                        onPressed: () {
+                          setState(() {
+                            isRemove = !isRemove;
+                          });
+                        }),
+                isRemove == false
+                    ? Container()
+                    : SizedBox(
+                      height: 50,
+                      width: 178,
+                      child: CustomButton(
+                          text: 'Concluir',
+                          textColor: const Color.fromRGBO(23, 160, 53, 1),
+                          backgroundColor: const Color.fromRGBO(100, 255, 106, 1),
+                          onPressed: () {
+                            setState(() {
+                              isRemove = !isRemove;
+                            });
+                          }),
+                    )
               ],
             ))
           ],
