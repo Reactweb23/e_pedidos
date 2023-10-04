@@ -79,7 +79,11 @@ class _CategoryPageState extends State<CategoryPage> {
                     : CustomButton(
                         text: 'Adicionar categoria',
                         backgroundColor: const Color.fromRGBO(54, 148, 178, 1),
-                        onPressed: () {}),
+                        onPressed: () {
+                          showDialog(context: context, builder: (BuildContext bc){
+                                return Dialog();
+                          });
+                        }),
                 isRemove
                     ? Container()
                     : CustomButton(
