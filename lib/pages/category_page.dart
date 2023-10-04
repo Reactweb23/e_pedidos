@@ -1,5 +1,4 @@
 import 'package:e_pedidos_front/shared/widgets/custom_button.dart';
-import 'package:e_pedidos_front/shared/widgets/custom_icon_button.dart';
 import 'package:e_pedidos_front/shared/widgets/custom_list_category.dart';
 import 'package:e_pedidos_front/shared/widgets/custom_layout.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +50,7 @@ class _CategoryPageState extends State<CategoryPage> {
             ),
             Expanded(
                 child: ListView(
-              children: [
+              children: const [
                 CustomListCategory()
               ],
             )),
