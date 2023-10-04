@@ -1,3 +1,4 @@
+import 'package:e_pedidos_front/pages/category_page.dart';
 import 'package:e_pedidos_front/pages/emphasis_page.dart';
 import 'package:e_pedidos_front/pages/home_page.dart';
 import 'package:e_pedidos_front/pages/login_page.dart';
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         '/emphasis' : (context) => const EmphasisPage(),
         '/newproduct' : (context) => const NewProductPage(),
         '/menu' : (context) => const MyMenuPage(),
+        '/category' : (context) => const CategoryPage(), 
       }
     );
   }
