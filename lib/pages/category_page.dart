@@ -1,5 +1,6 @@
 import 'package:e_pedidos_front/shared/widgets/custom_button.dart';
 import 'package:e_pedidos_front/shared/widgets/custom_icon_button.dart';
+import 'package:e_pedidos_front/shared/widgets/custom_list_category.dart';
 import 'package:e_pedidos_front/shared/widgets/custom_layout.dart';
 import 'package:flutter/material.dart';
 
@@ -41,23 +42,17 @@ class _CategoryPageState extends State<CategoryPage> {
             const SizedBox(
               height: 15,
             ),
+            const Text(
+              'Minhas categorias',
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+            ),
+            const SizedBox(
+              height: 14,
+            ),
             Expanded(
                 child: ListView(
               children: [
-                ListTile(
-                    leading: CustomIconButton(
-                        icon: Icons.remove,
-                        backgroundColor: const Color.fromRGBO(255, 148, 148, 1),
-                        iconColor: const Color.fromRGBO(255, 0, 0, 1),
-                        onTap: () {}),
-                    title: const Text('Pratos'),
-                    contentPadding: const EdgeInsets.only(bottom: 0)),
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 1,
-                  decoration: const BoxDecoration(
-                      color: Color.fromRGBO(54, 148, 178, 1)),
-                ),
+                CustomListCategory()
               ],
             )),
             Center(
