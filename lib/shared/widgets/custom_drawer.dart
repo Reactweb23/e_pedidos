@@ -102,9 +102,12 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 fontSize: 18,
                 color: Color.fromRGBO(131, 131, 131, 1)),
           )),
-      const ListTile(
-          leading: Icon(Icons.account_box),
-          title: Text(
+      ListTile(
+          onTap: () {
+            Navigator.of(context).pushNamed('/account');
+          },
+          leading: const Icon(Icons.account_box),
+          title: const Text(
             "Minha conta",
             style: TextStyle(
                 fontWeight: FontWeight.w500,
