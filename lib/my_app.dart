@@ -8,6 +8,7 @@ import 'package:e_pedidos_front/pages/new_product_page.dart';
 import 'package:e_pedidos_front/pages/orders_page.dart';
 import 'package:e_pedidos_front/pages/recover_password.dart';
 import 'package:e_pedidos_front/pages/register_page.dart';
+import 'package:e_pedidos_front/pages/sales_page.dart';
 import 'package:e_pedidos_front/pages/tables_page.dart';
 import 'package:flutter/material.dart';
 
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/menu' : (context) => const MyMenuPage(),
         '/category' : (context) => const CategoryPage(), 
         '/account' : (context) => const MyAccountPage(),
+        '/sales' : (context) => const SalesPage(),
       }
     );
   }
