@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class CustomCardProductSales extends StatefulWidget {
-  const CustomCardProductSales({
+class CustomCardProductSalesRed extends StatefulWidget {
+  const CustomCardProductSalesRed({
     super.key,
   });
 
   @override
-  State<CustomCardProductSales> createState() => _CustomCardProductSalesState();
+  State<CustomCardProductSalesRed> createState() => _CustomCardProductSalesState();
 }
 
-class _CustomCardProductSalesState extends State<CustomCardProductSales> {
+class _CustomCardProductSalesState extends State<CustomCardProductSalesRed> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,7 +17,7 @@ class _CustomCardProductSalesState extends State<CustomCardProductSales> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: const Color.fromRGBO(43, 184, 49, 1),
+          color: const Color.fromRGBO(207, 7, 7, 1),
           width: 2.0,
         ),
       ),
@@ -27,11 +27,11 @@ class _CustomCardProductSalesState extends State<CustomCardProductSales> {
             padding: const EdgeInsets.symmetric(vertical: 9),
             width: double.infinity,
             decoration: BoxDecoration(
-              color: const Color.fromRGBO(43, 184, 49, 1),
+              color: const Color.fromRGBO(207, 7, 7, 1),
               borderRadius: BorderRadius.circular(20),
             ),
             child: const Text(
-              'Produto mais pedido',
+              'Produto menos pedido',
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.white),
             ),

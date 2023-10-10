@@ -1,5 +1,6 @@
 import 'package:e_pedidos_front/shared/widgets/custom_card_sales.dart';
 import 'package:e_pedidos_front/shared/widgets/custom_card_sales_product.dart';
+import 'package:e_pedidos_front/shared/widgets/custom_card_sales_product_red.dart';
 import 'package:e_pedidos_front/shared/widgets/custom_layout.dart';
 import 'package:flutter/material.dart';
 
@@ -53,7 +54,11 @@ class _SalesPageState extends State<SalesPage> {
                 SizedBox(
                   height: 24,
                 ),
-                CustomCardProductSales()
+                CustomCardProductSales(),
+                SizedBox(
+                  height: 24,
+                ),
+                CustomCardProductSalesRed()
               ],
             ))
           ],
